@@ -1,5 +1,10 @@
 package service;
 
+
+import ch.qos.logback.core.net.server.Client;
+import com.sun.tools.javac.util.List;
+
+
 public interface ClientService {
 
     /**
@@ -12,7 +17,7 @@ public interface ClientService {
      * Возвращает список всех имеющихся клиентов
      * @return список клиентов
      */
-    List<client> readAll();
+    List<Client> readAll();
 
     /**
      * Возвращает клиента по его ID

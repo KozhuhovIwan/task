@@ -1,7 +1,14 @@
 package controller;
 
+import ch.qos.logback.core.net.server.Client;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+import service.ClientService;
+import java.util.List;
+
 @RestController
-public class ClientController {
+public class ClientController<client> {
 
     private final ClientService clientService;
 
@@ -18,7 +25,7 @@ public class ClientController {
 
     @GetMapping(value = "/clients")
     public ResponseEntity<List<Client>> read() {
-        final List<client> clients = clientService.readAll();
+        final List<Client> clients = clientService.readAll();
 
         return clients != null &&  !clients.isEmpty()
                 ? new ResponseEntity<>(clients, HttpStatus.OK)
