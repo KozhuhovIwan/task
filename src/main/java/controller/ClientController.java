@@ -1,6 +1,7 @@
 package controller;
 
-import ch.qos.logback.core.net.server.Client;
+//import ch.qos.logback.core.net.server.Client;
+import model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,8 @@
 package service;
 
-import ch.qos.logback.core.net.server.Client;
+//import ch.qos.logback.core.net.server.Client;
 import com.sun.tools.javac.util.List;
+import model.Client;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
