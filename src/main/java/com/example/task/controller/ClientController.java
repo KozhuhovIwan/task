@@ -1,11 +1,12 @@
-package controller;
+package com.example.task.controller;
 
-//import ch.qos.logback.core.net.server.Client;
-import model.Client;
+import com.example.task.model.Client;
+import com.example.task.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.ClientService;
+
 import java.util.List;
 
 @RestController

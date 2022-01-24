@@ -1,12 +1,11 @@
-package service;
+package com.example.task.service;
 
-//import ch.qos.logback.core.net.server.Client;
-import com.sun.tools.javac.util.List;
-import model.Client;
+import com.example.task.model.Client;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
