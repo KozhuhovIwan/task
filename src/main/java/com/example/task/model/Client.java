@@ -1,4 +1,4 @@
-package model;
+package com.example.task.model;
 
 public class Client {
 
@@ -23,3 +23,4 @@ public class Client {
 
 
 }
+/** Создаём Id и имя пользователя, гетеры, сетеры, всё как мы любим**/
