@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 public class ClientController<client> {
 
+
     /**
      @RestController — говорит спрингу, что данный класс является REST контроллером.
      Т.е. в данном классе будет реализована логика обработки клиентских запросов
@@ -21,17 +22,20 @@ public class ClientController<client> {
      этой реализации в конструктор контроллера.
      **/
 
+
     private final ClientService clientService;
 
     @Autowired
     public ClientController(ClientService clientService) {
         this.clientService = clientService;
     }
+
     /** Операции CRUD.
     Создаём метод create.
      Внутри тела метода вызываем метод create у ранее созданного сервиса и
      передаем ему принятого в параметрах контроллера клиента.
     **/
+
 
     @PostMapping(value = "/clients")
     public ResponseEntity<?> create(@RequestBody Client client) {
@@ -39,12 +43,14 @@ public class ClientController<client> {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+
     /** Создаём метод Read
      Внутри метода, с помощью написанного сервиса получаем список всех клиентов.
      Если список не Null возвращается 200 (в Постмане) иначе возвращается 400.
      Если в друг в Постмане при обращении по localhost:8080 будет ошибка, можно попробовать
      через / добавить clients.
     **/
+
 
     @GetMapping(value = "/clients")
     public ResponseEntity<List<Client>> read() {
@@ -55,8 +61,10 @@ public class ClientController<client> {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+
     /** Реализация поиска по id
      **/
+
 
     @GetMapping(value = "/clients/{id}")
     public ResponseEntity<Client> read(@PathVariable(name = "id") int id) {
@@ -66,6 +74,7 @@ public class ClientController<client> {
                 ? new ResponseEntity<>(client, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
 
    /** Реализация метода Update.
     **/
@@ -78,6 +87,7 @@ public class ClientController<client> {
                 ? new ResponseEntity<>(HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
+
 
     /** Реализация метода Delite.
     **/

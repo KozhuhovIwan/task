@@ -1,8 +1,9 @@
-package com.example.task.service;
+package service;
 
-import com.example.task.model.Client;
-import java.util.List;
 
+//import ch.qos.logback.core.net.server.Client;
+import com.sun.tools.javac.util.List;
+import model.Client;
 
 
 public interface ClientService {
