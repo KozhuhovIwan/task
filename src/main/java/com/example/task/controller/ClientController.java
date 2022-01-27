@@ -89,7 +89,7 @@ public class ClientController<client> {
     }
 
 
-    /** Реализация метода Delite.
+    /** Реализация метода Del.
     **/
 
     @DeleteMapping(value = "/clients/{id}")
