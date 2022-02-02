@@ -2,14 +2,19 @@ package com.example.task.model;
 
 public class Client {
 
-    private Integer id;
+    private String id;
     private String name;
 
-    public Integer getId() {
+    public Client(String name) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String Id) {
         this.id = id;
     }
 

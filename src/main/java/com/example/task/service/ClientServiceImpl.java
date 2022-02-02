@@ -13,14 +13,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ClientServiceImpl implements ClientService {
 
     // Хранилище клиентов
-    private static final Map<Integer, Client> CLIENT_REPOSITORY_MAP = new HashMap<>();
+    private static final Map<String, Client> CLIENT_REPOSITORY_MAP = new HashMap<String, Client>();
 
     // Переменная для генерации ID клиента
     private static final AtomicInteger CLIENT_ID_HOLDER = new AtomicInteger();
 
     @Override
     public void create(Client client) {
-        final int clientId = CLIENT_ID_HOLDER.incrementAndGet();
+        final String clientId = CLIENT_ID_HOLDER.incrementAndGet();
         client.setId(clientId);
         CLIENT_REPOSITORY_MAP.put(clientId, client);
     }
@@ -36,7 +36,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public boolean update(Client client, int id) {
+    public boolean update(Client client, String id) {
         if (CLIENT_REPOSITORY_MAP.containsKey(id)) {
             client.setId(id);
             CLIENT_REPOSITORY_MAP.put(id, client);

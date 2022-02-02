@@ -34,6 +34,8 @@ public class ClientController<client> {
     Создаём метод create.
      Внутри тела метода вызываем метод create у ранее созданного сервиса и
      передаем ему принятого в параметрах контроллера клиента.
+     ResponseEntity — специальный класс для возврата ответов.
+     С помощью него можно в дальнейшем вернуть клиенту HTTP статус код.
     **/
 
 
@@ -80,7 +82,7 @@ public class ClientController<client> {
     **/
 
     @PutMapping(value = "/clients/{id}")
-    public ResponseEntity<?> update(@PathVariable(name = "id") int id, @RequestBody Client client) {
+    public ResponseEntity<?> update(@PathVariable(name = "id") String id, @RequestBody Client client) {
         final boolean updated = clientService.update(client, id);
 
         return updated

@@ -34,7 +34,7 @@ public interface ClientService {
      * @param id - id клиента которого нужно обновить
      * @return - true если данные были обновлены, иначе false
      */
-    boolean update(Client client, int id);
+    boolean update(Client client, String id);
 
     /**
      * Удаляет клиента с заданным ID
