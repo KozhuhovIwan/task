@@ -5,9 +5,9 @@ public class Client {
     private String id;
     private String name;
 
-    public Client(String name) {
-        this.name = name;
+    public Client(String id, String name) {
         this.id = id;
+        this.name = name;
     }
 
     public String getId() {
@@ -28,4 +28,4 @@ public class Client {
 
 
 }
-/** Создаём Id и имя пользователя, гетеры, сетеры, всё как мы любим **/
+/** Создаём Id и имя пользователя, конструктор, гетеры, сетеры, вот это всё **/
