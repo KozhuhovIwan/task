@@ -16,7 +16,7 @@ public class Client {
     }
 
     public void setId(String Id) {
-        this.id = id;
+            this.id = id;
     }
 
     public String getName() {
@@ -24,9 +24,9 @@ public class Client {
     }
 
     public void setName(String name) {
-        this.name = name;
+            this.name = name;
+
     }
 
-
 }
-/** Создаём Id и имя пользователя, конструктор, гетеры, сетеры, вот это всё **/
+/** Создаём Id и имя пользователя, конструктор, гетеры, сеттеры, вот это всё **/
