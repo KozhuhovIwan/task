@@ -20,7 +20,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void create(Client client) {
-        final String clientId = CLIENT_ID_HOLDER.incrementAndGet();
+        final String clientId = String.valueOf(CLIENT_ID_HOLDER.incrementAndGet());
         client.setId(clientId);
         CLIENT_REPOSITORY_MAP.put(clientId, client);
     }

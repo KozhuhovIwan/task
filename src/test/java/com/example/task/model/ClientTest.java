@@ -19,16 +19,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class ClientTest {
 
     @Test
-    void getId() {
-        Client client = new Client("1");
-        assertEquals("1", client.getId());
-    }
+    void constr1(){
+        Client client = new Client("1", "Iwan");
+        assertEquals("1", client.getId(), "Id - test complete");
+        assertEquals("Iwan", client.getName(), "Iwan - test complete");
+      }
 
+/*
     @Test
     void setId() {
         Client client = new Client("1");
         client.setId("2");
-        assertEquals("2", client.getId());
+        assertEquals("2", client.setId());
     }
 
     @Test
@@ -41,6 +43,6 @@ class ClientTest {
     void setName() {
         Client client = new Client ("Iwan");
         client.setName("Tasha");
-        assertEquals("Tasha", client.getName());
-    }
+        assertEquals("Tasha", client.setName());
+    } */
 }
